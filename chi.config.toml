@@ -1,0 +1,13 @@
+# chi.config.toml
+
+# Network Settings
+lrclib = "https://lrclib.net"
+preview = "http://localhost:5173" # Vite
+host = "127.0.0.1" # Loopback Address
+port = 8000 # Uvicorn Port
+
+# Preferences
+demucs_model = "htdemucs"
+
+# Paths
+data_dir = "data"
