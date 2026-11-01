@@ -34,5 +34,24 @@ class Settings:
     # Paths
     data_dir: Path
 
+    @property
+    def song_dir(self) -> Path:
+        return self.data_dir / "songs"
 
-print(load_settings(path=path).data_dir)
+    @property
+    def tmp_dir(self) -> Path:
+        return self.data_dir / "tmp"
+
+    @property
+    def user_path(self) -> Path:
+        return self.data_dir / "user.json"
+
+    @property
+    def sessions_path(self) -> Path:
+        return self.data_dir / "sessions.jsonl"
+
+
+if __name__ == "__main__":
+    s = load_settings(path)
+    print(s.sessions_path)
+    print(s.song_dir)
